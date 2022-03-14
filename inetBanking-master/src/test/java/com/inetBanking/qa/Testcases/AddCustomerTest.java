@@ -17,7 +17,8 @@ public class AddCustomerTest extends TestBase {
 		login.SetUserName(UserName);
 		login.SetPassword(Password);
 		login.ClickSubmitBtn();
-	//logger.info("Login Successfull");
+		logger.info("Login Successfull");
+
 		Thread.sleep(3000);
 
 		AddCustomerPage acp = new AddCustomerPage(driver);
@@ -37,19 +38,18 @@ public class AddCustomerTest extends TestBase {
 		acp.custemailid(email);
 		acp.custpassword("abcdef");
 		acp.custsubmit();
-		
+
 		Thread.sleep(5000);
-		
+
 		boolean result = driver.getPageSource().contains("Customer Registered Successfully!!!");
-		if(result == true) {
+		if (result == true) {
 			logger.info("test case passed....");
 			Assert.assertTrue(true);
-		}else {
+		} else {
 			logger.info("test case failed....");
 			captureScreen(driver, "addNewCustomer");
 			Assert.assertTrue(false);
 		}
 	}
-
 
 }
