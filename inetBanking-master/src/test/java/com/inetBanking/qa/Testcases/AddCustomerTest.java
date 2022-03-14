@@ -17,7 +17,7 @@ public class AddCustomerTest extends TestBase {
 		login.SetUserName(UserName);
 		login.SetPassword(Password);
 		login.ClickSubmitBtn();
-		logger.info("Login Successfull");
+		//logger.info("Login Successfull");
 		Thread.sleep(3000);
 
 		AddCustomerPage acp = new AddCustomerPage(driver);
