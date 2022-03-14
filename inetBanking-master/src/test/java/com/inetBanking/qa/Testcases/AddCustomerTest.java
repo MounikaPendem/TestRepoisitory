@@ -14,7 +14,7 @@ public class AddCustomerTest extends TestBase {
 	@Test
 	public void addNewCustomer() throws InterruptedException, IOException {
 		LoginPage login = new LoginPage(driver);
-		login.SetUserName(UserName);
+		login.SetUserName(UserNamesssssssssss);
 		login.SetPassword(Password);
 		login.ClickSubmitBtn();
 		logger.info("Login Successfull");
